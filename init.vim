@@ -17,6 +17,10 @@ set scrolloff=15
 set signcolumn=yes
 
 call plug#begin()
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -62,7 +66,8 @@ set nobackup
 set undodir=~/.vim/undodir
 
 nnoremap <leader>pv :Vex<CR>
-nnoremap <leader><CR> :terminal<CR>
+nnoremap <leader><CR> :w<CR>
+nnoremap <leader>q :q<CR>
 inoremap jk <esc>
 nnoremap  <C-p> :GFiles<CR>
 nnoremap <leader>pf :Files<CR>
